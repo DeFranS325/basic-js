@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\src",
+    "\\test"
   ],
-  "SelectedNode": "\\D:\\DeFranS\\0.GitHub\\basic-js",
+  "SelectedNode": "\\src\\what-season.js",
   "PreviewInSolutionExplorer": false
 }

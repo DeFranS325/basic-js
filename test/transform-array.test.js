@@ -100,6 +100,7 @@ describe('Transform array', () => {
         it.optional('doesn\'t change initial array', () => {
             for (let i = 0; i < 50; i += 1) {
                 const { input } = createSample(i);
+                console.log(input);
                 const inputCopy = [...input];
                 transform(input);
                 assert.deepStrictEqual(input, inputCopy);
