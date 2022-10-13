@@ -14,23 +14,23 @@ const { NotImplementedError } = require('../extensions/index.js');
   },
   addLink(value) {
     if(value === undefined)
-      value = '';
+          value = '';
     if (value == null)
       value = 'null';
-    console.log(value.toString());
+    console.log('\'' + value.toString() + '\'');
     this.mass.push(value.toString());
     return this
     //throw new NotImplementedError('Not implemented');
     // remove line with error and write your code here
   },
-  removeLink(position) {
-    if ((typeof (position) === 'number') && (position > 0)) {
-      this.mass.splice(position-1, 1);
-      return this;
+     removeLink(position) {
+         if ((Number.isInteger(position)) && (position > 0) && (position < this.mass.length)) {
+          this.mass.splice(position - 1, 1);
+          return this;
     }
     else {
       this.mass = [];
-      throw new NotImplementedError('You can\'t remove incorrect link!');
+      throw new Error("You can't remove incorrect link!");
     }
     // remove line with error and write your code here
   },
@@ -42,13 +42,9 @@ const { NotImplementedError } = require('../extensions/index.js');
   },
   finishChain() {
     let res = '';
-    this.mass.forEach((el, index, arr) => {
-      if (index < arr.length - 1)
-        res += `( ${el} )~~`;
-      else
-        res += `( ${el} )`;
-    })
-    return res;
+      this.mass.forEach(el => {res += `( ${el} )~~` });
+      this.mass = [];
+      return res.slice(0, -2);
     //throw new NotImplementedError('Not implemented');
     // remove line with error and write your code here
   }
