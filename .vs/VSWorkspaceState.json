@@ -1,7 +1,10 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\extensions",
+    "\\src",
+    "\\test"
   ],
-  "SelectedNode": "\\D:\\DeFranS\\0.GitHub\\basic-js",
+  "SelectedNode": "\\test\\vigenere-cipher.test.js",
   "PreviewInSolutionExplorer": false
 }
